@@ -206,6 +206,7 @@ impl PickerDelegate for AttachModalDelegate {
     }
 
     fn confirm(&mut self, _: bool, window: &mut Window, cx: &mut Context<Picker<Self>>) {
+        // TODO: use secondary confirm to save to debug.json like with new_process
         let candidate = self
             .matches
             .get(self.selected_index())
